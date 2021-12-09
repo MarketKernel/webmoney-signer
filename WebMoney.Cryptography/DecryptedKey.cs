@@ -47,7 +47,7 @@ namespace WebMoney.Cryptography
         protected static readonly byte[] MagicNumber = { 0x81, 0x00 };
         protected static readonly byte[] Mark = { 0x01, 0x00 };
 
-        protected static readonly Encoding DefaultEncoding = Encoding.GetEncoding(1251);
+        protected static readonly Encoding DefaultEncoding = CodePagesEncodingProvider.Instance.GetEncoding(1251);
         
         protected DecryptedKey()
         {

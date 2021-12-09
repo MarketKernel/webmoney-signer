@@ -17,13 +17,13 @@ namespace WebMoney.Cryptography
         }
 
         [ComVisible(false)]
-        public static new MD4 Create()
+        public new static MD4 Create()
         {
             return Create("WebMoney.Cryptography.MD4");
         }
 
         [ComVisible(false)]
-        public static new MD4 Create(string hashName)
+        public new static MD4 Create(string hashName)
         {
             return (MD4)CryptoConfig.CreateFromName(hashName);
         }

@@ -1,5 +1,3 @@
-# WebMoney Signer для платформы .Net (WMSignerFX)
+# WMSigner for .Net and .Net Core
 
-.Net Framework version
-
-Справка: http://wiki.webmoney.ru/projects/webmoney/wiki/WMSignerFX
+See: https://wiki.webmoney.ru/projects/webmoney/wiki/WMSignerFX

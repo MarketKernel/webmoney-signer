@@ -8,7 +8,7 @@ namespace WebMoney.Cryptography.Tests
     [TestClass]
     public class DecryptedKeyTests
     {
-        private static readonly Encoding Encoding = Encoding.GetEncoding("windows-1251");
+        private static readonly Encoding Encoding = CodePagesEncodingProvider.Instance.GetEncoding(1251);
 
         [TestMethod]
         public void EncryptDecrypt()

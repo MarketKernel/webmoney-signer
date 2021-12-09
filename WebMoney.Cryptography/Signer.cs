@@ -22,8 +22,8 @@ namespace WebMoney.Cryptography
         private static readonly byte[] Header = { 0x38, 0 };
         private static readonly byte[] Tail = { 1, 0 };
 
-        private static readonly Encoding MessageEncoding = Encoding.GetEncoding(1251);
-        
+        private static readonly Encoding MessageEncoding = CodePagesEncodingProvider.Instance.GetEncoding(1251);
+
         private KeeperKey _key;
 
         private bool _isDisposed;
@@ -37,10 +37,7 @@ namespace WebMoney.Cryptography
         [ComVisible(false)]
         public void Initialize(KeeperKey keeperKey)
         {
-            if (null == keeperKey)
-                throw new ArgumentNullException(nameof(keeperKey));
-            
-            _key = keeperKey;
+            _key = keeperKey ?? throw new ArgumentNullException(nameof(keeperKey));
         }
 
         public string Sign(string value)
